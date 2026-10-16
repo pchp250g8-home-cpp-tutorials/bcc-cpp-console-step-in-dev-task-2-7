@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{F9F36B2C-5A21-459E-9F39-BB03B8F96DA3}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Task-2-7-a-en\Task-2-7-a-en.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Task-2-7-a-ru\Task-2-7-a-ru.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Task-2-7-b-en\Task-2-7-b-en.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Task-2-7-b-ru\Task-2-7-b-ru.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Task-2-7-a-en">
+        <MSBuild Projects="Task-2-7-a-en\Task-2-7-a-en.cbproj"/>
+    </Target>
+    <Target Name="Task-2-7-a-en:Clean">
+        <MSBuild Projects="Task-2-7-a-en\Task-2-7-a-en.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Task-2-7-a-en:Make">
+        <MSBuild Projects="Task-2-7-a-en\Task-2-7-a-en.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Task-2-7-a-ru">
+        <MSBuild Projects="Task-2-7-a-ru\Task-2-7-a-ru.cbproj"/>
+    </Target>
+    <Target Name="Task-2-7-a-ru:Clean">
+        <MSBuild Projects="Task-2-7-a-ru\Task-2-7-a-ru.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Task-2-7-a-ru:Make">
+        <MSBuild Projects="Task-2-7-a-ru\Task-2-7-a-ru.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Task-2-7-b-en">
+        <MSBuild Projects="Task-2-7-b-en\Task-2-7-b-en.cbproj"/>
+    </Target>
+    <Target Name="Task-2-7-b-en:Clean">
+        <MSBuild Projects="Task-2-7-b-en\Task-2-7-b-en.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Task-2-7-b-en:Make">
+        <MSBuild Projects="Task-2-7-b-en\Task-2-7-b-en.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Task-2-7-b-ru">
+        <MSBuild Projects="Task-2-7-b-ru\Task-2-7-b-ru.cbproj"/>
+    </Target>
+    <Target Name="Task-2-7-b-ru:Clean">
+        <MSBuild Projects="Task-2-7-b-ru\Task-2-7-b-ru.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Task-2-7-b-ru:Make">
+        <MSBuild Projects="Task-2-7-b-ru\Task-2-7-b-ru.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Task-2-7-a-en;Task-2-7-a-ru;Task-2-7-b-en;Task-2-7-b-ru"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Task-2-7-a-en:Clean;Task-2-7-a-ru:Clean;Task-2-7-b-en:Clean;Task-2-7-b-ru:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Task-2-7-a-en:Make;Task-2-7-a-ru:Make;Task-2-7-b-en:Make;Task-2-7-b-ru:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
